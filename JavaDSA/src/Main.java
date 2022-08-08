@@ -125,17 +125,7 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        int test = in.nextInt();
-        for(int i = 0; i<test; i++){
-            int n = in.nextInt();
-            List<Integer> arr = Arrays.stream(in.readLine().trim().split(" ")).map(Integer::parseInt).collect(Collectors.toList());
-            out.write(String.valueOf(ans(n,arr)));
-        }
-        out.flush();
-        out.close();
-    }
-    static int ans(int n, List<Integer> arr){
-        return 0;
+        int n = in.nextInt();
     }
 }
 
