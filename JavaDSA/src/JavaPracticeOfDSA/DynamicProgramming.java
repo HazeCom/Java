@@ -112,3 +112,7 @@ class CanSum{
         return false;
     }
 }
+
+class HasSum{
+
+}
