@@ -1,6 +1,9 @@
 package JavaPracticeOfDSA;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 
 public class DynamicProgramming {
     public static void main(String[] args) {
@@ -26,6 +29,13 @@ public class DynamicProgramming {
 
         //CanSum using Memoization
         System.out.printf("%-20b%s\n",CanSum.canSum(300,secoundNumbers,new HashMap<>()), " //CanSum using Memoization");
+
+        //HasSum using recursion;
+        System.out.println(HasSum.hasSum(7,numbers)+" //HasSum using Recursion");
+
+        ArrayList<Integer>[] group = (ArrayList<Integer>[]) new ArrayList[200];
+        System.out.println(HasSum.hasSum(100, new int[]{1, 2, 5, 25}, group)+" //HasSum using Memoization");
+
     }
 
 }
@@ -114,5 +124,46 @@ class CanSum{
 }
 
 class HasSum{
+    static List<Integer> hasSum(int targets, int[] numbers){
+        if(targets == 0)
+            return new ArrayList<>();
+        if(targets<0)
+            return null;
+
+        for(int i : numbers){
+            List<Integer> result = hasSum(targets-i,numbers);
+            if(result!=null){
+                List<Integer> copy = new ArrayList<>();
+                copy.addAll(result);
+                copy.add(i);
+                return copy;
+            }
+        }
+        return null;
+    }
+
+    static List<Integer> hasSum(int targets, int[] numbers, ArrayList<Integer>[] memo){
+        if(targets == 0) {
+            return new ArrayList<>();
+        }
+        if(targets<0) {
+            return null;
+        }
+        if(memo[targets]!=null)
+            return memo[targets];
+        List<Integer> sort = new ArrayList<>();
+        for(int i : numbers){
+            List<Integer> result = hasSum(targets-i,numbers,memo);
+            if(result!=null){
+                List<Integer> copy = new ArrayList<>(result);
+                copy.add(i);
+                if(sort.isEmpty() || sort.size()> copy.size()){
+                    sort = copy;
+                }
+            }
+        }
+        memo[targets] = (ArrayList<Integer>) sort;
+        return sort;
+    }
 
 }

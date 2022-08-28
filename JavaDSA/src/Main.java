@@ -1,7 +1,7 @@
 // java fast input and output
 
-import org.omg.PortableInterceptor.INACTIVE;
 
+import javax.lang.model.element.NestingKind;
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -125,9 +125,10 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-        int n = in.nextInt();
+
     }
 }
+
 
 
 //System.out.println((a & 1) == 0 ?  "EVEN" : "ODD" );
