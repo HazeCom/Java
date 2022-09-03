@@ -1,0 +1,13 @@
+package component;
+
+import javax.persistence.Entity;
+
+@Entity
+public class Student {
+	
+	@javax.persistence.Id
+	int Id;
+	String name;
+	String address;
+	int marks;
+}

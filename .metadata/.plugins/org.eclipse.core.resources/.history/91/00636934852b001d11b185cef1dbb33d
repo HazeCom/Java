@@ -1,0 +1,15 @@
+package component;
+
+import javax.persistence.*;
+
+public class StudentDao {
+	private EntityManagerFactory emf = Persistence.createEntityManagerFactory("Student");
+	private EntityManager em = emf.createEntityManager();
+	
+	void add(Student student) {
+		em.getTransaction().begin();
+		em.persist(student);
+		em.getTransaction().commit();
+		System.out.println("Data has been added");
+	}
+}

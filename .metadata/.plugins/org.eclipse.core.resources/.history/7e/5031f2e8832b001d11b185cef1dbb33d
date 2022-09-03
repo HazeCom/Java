@@ -1,0 +1,11 @@
+package component;
+
+import javax.persistence.*;
+
+public class StudentDao {
+
+	void add(Student student) {
+//		EntityManagerFactory emf =
+	}
+
+}

@@ -1,0 +1,10 @@
+package component;
+
+public class Main {
+
+	public static void main(String[] args) {
+		StudentDao studentDao = new StudentDao();
+		studentDao.add(new Student(2,"Raju","abc",400));
+	}
+
+}
