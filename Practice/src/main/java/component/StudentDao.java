@@ -1,5 +1,7 @@
 package component;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 public class StudentDao {
@@ -28,8 +30,8 @@ public class StudentDao {
 			student.setMarks(student.getMarks()+marks);
 			em.getTransaction().commit();
 		}else {
-			
+			System.out.println("no student with the given roll no was found");
 		}
-		
 	}
+	
 }

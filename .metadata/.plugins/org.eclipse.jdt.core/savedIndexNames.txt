@@ -1,22 +1,4 @@
 INDEX VERSION 1.131+C:\Users\raibi\OneDrive\Desktop\Java\Java\.metadata\.plugins\org.eclipse.jdt.core
 2446798781.index
-3298897984.index
-3040262127.index
-1605281209.index
-3387050729.index
-4187624.index
-1903911132.index
-4052274414.index
-3594584440.index
-3913263873.index
-72810586.index
-2774886806.index
-98856027.index
-3750771162.index
-1201217693.index
-709486101.index
+3524882787.index
 1865797976.index
-716512064.index
-3602029035.index
-2498116977.index
-667675768.index

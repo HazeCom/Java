@@ -3,6 +3,9 @@ package component;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+	@NamedQuery(name = "Student.getAll", query = "select * from student")
+})
 public class Student {
 	
 	@Id
