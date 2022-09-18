@@ -125,7 +125,8 @@ public class Main {
     }
 
     public static void main(String[] args) throws IOException {
-
+        Map<Integer,Integer> map = new TreeMap<>();
+        Queue<Integer> in = new LinkedList<>();
     }
 }
 

@@ -1,7 +1,5 @@
 package component;
 
-import java.util.List;
-
 import javax.persistence.*;
 
 public class StudentDao {

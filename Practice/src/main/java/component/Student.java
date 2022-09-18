@@ -9,6 +9,7 @@ import javax.persistence.*;
 public class Student {
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int roll;
 	private String name;
 	private String address;
